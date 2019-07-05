@@ -1,0 +1,64 @@
+------------------replacement for hadoop----->spark<---------------------
+
+1)storage --own storage as well as hdfs of hadoop
+2)processing--own processing --Yarn is also provided
+3)sql data--hive -hql also apache use --apache sql
+4)live streaming0 --apache storm--by deafault support live streaming
+5)ml/ai over spark --apache mahout ----deafault ml library--spark mlib
+6)data analytics /visual ---spark graphx
+
+7)10x faster than hadoop
+
+spark --r,java,python,scala(build language)
+data bricks is basically a platform which has spark so saprk and big data is same 
+but it is a platform which run spark in it.
+
+---------------------------------- modes of +spark
+1)stand alone(single node/machine)
+2)distributed env(multi node)
+3)hdfs(single vs multi node)
+
+****use spark instead of yarn which is called spark master
+and nodemanger replace by spark worker***
+
+
+
+
+
+-------------------spark install-----------------------------
+
+1)summer 19 url big data saprk 
+2)wget url
+3)tar xvzf   spark tar file
+4)change name by spark
+5)ls saprk24/
+6)vi .bashrc
+--->SPARK_HOME=/home/ec2-user/spark24
+    path me append bin:''''''
+8)source.bashrc
+9)spark-shell for scala 
+10)pyspark for python
+11)pip3 install jupyter
+12)jupyter-notebook --ip=0.0.0.0 --port=8888  --no-browser  &>/dev/null  &
+13)alias in bashrc
+14)jupyter notebook list
+15)ip+instance ip replace
+
+python3 code 
+#to search pyspark in saprk directory
+
+>>!sudo pip3 install findspark
+>>import pyspark
+>>findspark.init  '/home/ec2-user/spark24'  locating spark directory
+>>from pyspark import SparkContext  #import spark core library
+
+>>sc=SparkCOntest()  
+>>data="hello","world","this","is","pyspark"
+>>frdd=sc.textFile '/home/ec2-user/a.txt'                            #load a file  it is our first rdd
+>>type(frdd)
+>>frdd.take( 3)           #to show first 3 lines                                     
+>>frdd.first           #to show first lines
+>>frdd.count
+>>newrdd=parallesize(data)                    #convert list data into rdd
+>>newrdd.collect
+>>newrdd.count
