@@ -54,11 +54,12 @@ python3 code
 
 >>sc=SparkCOntest()  
 >>data="hello","world","this","is","pyspark"
->>frdd=sc.textFile '/home/ec2-user/a.txt'                            #load a file  it is our first rdd
+>>frdd=sc.textFile '/home/ec2-user/a.txt'        #load a file  it is our first rdd
 >>type(frdd)
->>frdd.take( 3)           #to show first 3 lines                                     
->>frdd.first           #to show first lines
+>>frdd.take( 3)                                #to show first 3 lines                                     
+>>frdd.first                                  #to show first lines
 >>frdd.count
 >>newrdd=parallesize(data)                    #convert list data into rdd
 >>newrdd.collect
 >>newrdd.count
+>>
